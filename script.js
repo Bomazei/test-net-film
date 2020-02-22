@@ -12,22 +12,22 @@ arLeft.style.opacity = '0'
 
 arRight.addEventListener('click', () => {
     
-    if (pos < items.length/2.6) {
+    if (pos < items.length/4) {
         pos++
-        itemsWrapper.style.transform = `translateX(-${pos*(itemWidth+20)*2}px)`
+        itemsWrapper.style.transform = `translateX(-${pos*(itemWidth+20)*3}px)`
         arLeft.style.opacity = '1'
     }
-    if (pos > items.length/2.6){
+    if (pos > items.length/4){
         arRight.style.opacity = '0'
+        itemsWrapper.style.transform = `translateX(-${pos*(itemWidth + 20)*2.6}px)`
     } 
-    console.log(itemWidth)
  
 })
 arLeft.addEventListener('click', () => {
     
     if (pos > 0) {
         pos--
-        itemsWrapper.style.transform = `translateX(-${pos*(itemWidth+20)*2}px)`
+        itemsWrapper.style.transform = `translateX(-${pos*(itemWidth+20)*3}px)`
         arRight.style.opacity = '1'
     }
     if (pos === 0){
